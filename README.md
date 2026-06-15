@@ -32,6 +32,8 @@
 Зарегистрируйте gitlab-runner для этого проекта и запустите его в режиме Docker. Раннер можно регистрировать и запускать на той же виртуальной машине, на которой запущен GitLab.
 В качестве ответа в репозиторий шаблона с решением добавьте скриншоты с настройками раннера в проекте.
 
+<img width="1650" height="747" alt="work-runer" src="https://github.com/user-attachments/assets/433f4fed-aee3-46cc-b6e9-7eceb6ba929f" />
+<img width="1700" height="936" alt="setting-runer" src="https://github.com/user-attachments/assets/1d243b3e-cf73-4533-9bf9-d0ab1796442a" />
 
 ---
 
