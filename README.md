@@ -32,6 +32,7 @@
 Зарегистрируйте gitlab-runner для этого проекта и запустите его в режиме Docker. Раннер можно регистрировать и запускать на той же виртуальной машине, на которой запущен GitLab.
 В качестве ответа в репозиторий шаблона с решением добавьте скриншоты с настройками раннера в проекте.
 
+### Решение 1
 <img width="1650" height="747" alt="work-runer" src="https://github.com/user-attachments/assets/433f4fed-aee3-46cc-b6e9-7eceb6ba929f" />
 <img width="1700" height="936" alt="setting-runer" src="https://github.com/user-attachments/assets/1d243b3e-cf73-4533-9bf9-d0ab1796442a" />
 
@@ -47,6 +48,39 @@
 
 файл gitlab-ci.yml для своего проекта или вставьте код в соответствующее поле в шаблоне;
 скриншоты с успешно собранными сборками.
+
+### Решение 2
+<img width="1058" height="413" alt="pipeline" src="https://github.com/user-attachments/assets/11ceef14-f907-4895-b006-666172714765" />
+
+gitlab-ci.yml:
+stages:
+  - build
+  - test
+  - deploy
+
+build_job:
+  stage: build
+  script:
+    - echo "Сборка проекта..."
+    - echo "Сборка завершена успешно!"
+  tags:
+    - docker
+
+test_job:
+  stage: test
+  script:
+    - echo "Запуск тестов..."
+    - echo "Все тесты пройдены!"
+  tags:
+    - docker
+
+deploy_job:
+  stage: deploy
+  script:
+    - echo "Развертывание..."
+    - echo "Проект успешно развернут!"
+  tags:
+    - docker
 
 ---
 
